@@ -1,3 +1,3 @@
-# Imed_criptografia_e_seguranca
+# Imed_React_Native
 
 ## Repositório Git com códigos implementados em aula
