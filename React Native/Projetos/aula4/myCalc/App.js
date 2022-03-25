@@ -116,7 +116,7 @@ export default function App() {
         <View style={styles.button}>
           <TouchableOpacity
             style={styles.buttonStyle}
-            onPress={() => alteraDisplay("4F")}
+            onPress={() => alteraDisplay("4")}
           >
             <Text>4</Text>
           </TouchableOpacity>
