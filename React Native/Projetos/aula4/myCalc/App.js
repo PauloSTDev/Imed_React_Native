@@ -213,9 +213,15 @@ export default function App() {
         <View style={styles.button}>
           <TouchableOpacity
             style={styles.buttonStyleOp}
-            onPress={() => calculo("/")}
-          >
+            onPress={() => calculo("/")}>
             <Text>/</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.button}>
+          <TouchableOpacity
+            style={styles.buttonStyleOpRoot}
+            onPress={() => calculo("√")}>
+            <Text>√</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -259,7 +265,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     elevation: 6
   }, buttonStyleOp: {
-    backgroundColor: "#004390",
+    backgroundColor: "#1E90FF",
+    color: "white",
+    alignItems: "center",
+    padding: 15,
+    borderRadius: 10,
+    shadowColor: "black",
+    shadowOpacity: 0.8,
+    elevation: 6
+  },
+
+  buttonStyleOpRoot: {
+    backgroundColor: "#00BFFF",
     color: "white",
     alignItems: "center",
     padding: 15,
