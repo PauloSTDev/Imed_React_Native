@@ -59,6 +59,8 @@ export default function App() {
       resut = n1 * n2
     else if (operacao === "/")
       resut = n1 / n2
+      else if (operacao === "√")
+      resut = Math.sqrt(n2)
 
     setResultado(resut)
     setFirst(false)
