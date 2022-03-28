@@ -49,22 +49,27 @@ export default function App() {
   const executa = (res) => {
     let n1 = parseInt(numero1)
     let n2 = parseInt(res)
-    let resut = 0
+    let result = 0
 
     if (operacao === "+")
-      resut = n1 + n2
+      result = n1 + n2
     else if (operacao === "-")
-      resut = n1 - n2
+      result = n1 - n2
     else if (operacao === "*")
-      resut = n1 * n2
+      result = n1 * n2
     else if (operacao === "/")
-      resut = n1 / n2
-      else if (operacao === "√")
-      resut = Math.sqrt(n2)
+      result = n1 / n2
+    else if (operacao === "√")
+      result = Math.sqrt(n2)
+      
+      if (n2 & n2)
+        console.log(n2, "numero");
 
-    setResultado(resut)
+      
+
+    setResultado(result)
     setFirst(false)
-    setFormula(`${formula} ${res} = ${resut}`)
+    setFormula(`${formula} ${res} = ${result}`)
 
   }
 

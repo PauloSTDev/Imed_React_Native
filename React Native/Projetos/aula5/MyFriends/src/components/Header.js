@@ -1,33 +1,42 @@
 //Sempre letra maiusculas para grandes implementações, classes
 //rnf para facilitar
-import { View, Text, StyleSheet} from 'react-native'
-import React, {useState}from 'react'
+
+import { View, Text, StyleSheet } from 'react-native'
+import React, { useLayoutEffect, useState } from 'react'
+import { setStatusBarBackgroundColor } from 'expo-status-bar'
 
 export default function Header(props) {
 
     const [cor, setCor] = useState("green")
-    const [titule, setTitulo] = useState("")
+    const [titulo, setTitulo] = useState("")
+
+    useLayoutEffect(() => {
+        if (props.corFundo)
+            setCor(props.corFundo)
+        if (props.titulo)
+            setTitulo(props.titulo)
 
 
-  return (
+    }, [])
 
-    <View style={styles.header}>
-      <Text style={styles.message}>Seja Bem vindo</Text>
-    </View>
-  )
+
+    return (
+        <View style={{
+            backgroundColor: cor,
+            height: 70,
+            alignItems: "center",
+            justifyContent: "center"
+        }}>
+            <Text style={styles.mensagem}> {titulo} </Text>
+
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-    header: {
-        height: 70,
-        backgroundColor: "#961e15",
-        alignItems: "center",
-        justifyContent: "center",
+    mensagem: {
         color: "white",
-    },
-    message: {
-        color: "white",
-
+        fontSize: 20,
+        marginTop: 15
     }
-  
-  });
+});
