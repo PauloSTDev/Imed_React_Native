@@ -1,6 +1,3 @@
-//Sempre letra maiusculas para grandes implementações, classes
-//rnf para facilitar
-
 import { View, Text, StyleSheet } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { setStatusBarBackgroundColor } from 'expo-status-bar'
@@ -15,8 +12,6 @@ export default function Header(props) {
             setCor(props.corFundo)
         if (props.titulo)
             setTitulo(props.titulo)
-
-
     }, [])
 
 
