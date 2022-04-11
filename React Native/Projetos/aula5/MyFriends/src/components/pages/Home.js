@@ -3,6 +3,7 @@ import { StyleSheet, FlatList, View, Text, Button } from 'react-native';
 import Registro from '../Registro';
 import CaixaTexto from '../CaixaTexto';
 import React, { useState, useLayoutEffect } from 'react'
+import axios from 'axios';
 
 const data = [
   {
@@ -65,7 +66,14 @@ const data = [
 
 export default function Home({ navigation }) {
 
+  const [amigos, setAmigos] = useState([])
+
+
   useLayoutEffect(() => {
+
+      axios.get("https://randomuser.me/api/?results=3")
+      .then((response) => setAmigos(response.data))
+      .catch((erro) => console.log("Erro", erro))
 
     navigation.setOptions({
       headerRight: () => (
